@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
-from .forms  import  ClienteForm, ProdutoForm, VendaForm, ItensForm
+from .forms import ClienteForm, ProdutoForm, VendaForm, ItensForm
 from .models import Cliente, Produto, Venda, Itens
 
 def tela_inicial(request):
