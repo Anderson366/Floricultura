@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Floricultura-Vendas</title>
+    </head>
+    <body>
+
+        <form action="{%url 'realizar_venda'%}" method="POST">
+            {% csrf_token%}
+             <p><label>Código do Cliente:</label><input placeholder="Código do Cliente" maxlength="40" type="text" name="cod_cliente"></p>
+             <p><label>Data da Venda:</label><input type="date" name="data_venda"></p>
+             <p><label>Valor da Venda:</label><input type="text" name="valor_venda"></p>
+
+            <button type="submit">Iniciar Venda</button>
+        </form>
+
+
+
+        <form action="{%url 'realizar_venda'%}" method="POST">
+            {% csrf_token%}
+
+            {{ form.as_p }}
+
+            <button type="submit">Cadastrar</button>
+
+        </form>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Produtos</title>
+
+</head>
+<h2>Cadastro de Produtos</h2>
+<table style="width:50%" align="right" border="thin">
+  <tr>
+        <th>NOME DO PRODUTO</th>
+        <th>VAL. PRODUTO</th>
+        <th>QUANT. ESTOQUE</th>
+  </tr>
+    {%for produto in produtos%}
+  <tr>
+      <td>{{produto.nome_produto}}</td>
+      <td>{{produto.valor_produto}}</td>
+      <td>{{produto.qnt_estoque}}</td>
+  </tr>
+     {%endfor%}
+
+</table>
+
+<form action="{%url 'salvar_produto'%}" method="POST">
+    {% csrf_token%}
+
+    <p><label>Nome do Produto:</label><input placeholder="nome do produto" type="text" name="nome_produto"></p>
+    <p><label>Valor do Produto:</label><input type="text" name="valor_produto"></p>
+    <p><label>Quantidade do Produto:</label><input type="text" name="qnt_estoque"></p>
+
+    <button type="submit">Cadastrar</button>
+</form>
+
+</body>
+</html>
