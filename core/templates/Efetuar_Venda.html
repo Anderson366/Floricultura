@@ -5,7 +5,6 @@
         <title>Floricultura-Vendas</title>
     </head>
     <body>
-
         <form action="{%url 'realizar_venda'%}" method="POST">
             {% csrf_token%}
              <p><label>Código do Cliente:</label><input placeholder="Código do Cliente" maxlength="40" type="text" name="cod_cliente"></p>
@@ -14,8 +13,6 @@
 
             <button type="submit">Iniciar Venda</button>
         </form>
-
-
 
         <form action="{%url 'realizar_venda'%}" method="POST">
             {% csrf_token%}

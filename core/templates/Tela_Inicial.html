@@ -4,14 +4,24 @@
         <meta charset="UTF-8">
         <title>Início</title>
         {%load static%}
-        <link rel="stylesheet" href="estilo.css">
+        <link rel="stylesheet" href="static/inicial.css">
+
     </head>
     <body>
-        <h3 class="">Minha Tela de Início</h3>
+        <div id="menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="{% url 'efetuar_venda'%}">Efetuar Venda</a></li>
+                <li><a href="{% url 'lista_clientes'%}">Cadastrar Cliente</a></li>
+                <li><a href="{% url 'lista_produtos'%}">Cadastrar Produto</a></li>
+            </ul>
+        </div>
+
+        <!--<h3 class="">Minha Tela de Início</h3>
         <a href="{% url 'efetuar_venda'%}">Efetuar Vendas</a><br/>
         <a href="{% url 'lista_clientes'%}">Cadastrar Cliente</a><br/>
         <a href="{% url 'lista_produtos'%}">Cadastrar Produto</a><br/>
-
+        -->
 
     </body>
 </html>
