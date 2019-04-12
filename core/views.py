@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
-from .forms import ClienteForm, ProdutoForm, VendaForm, ItensForm
+from .forms  import  ClienteForm, ProdutoForm, VendaForm, ItensForm
 from .models import Cliente, Produto, Venda, Itens
 
 def tela_inicial(request):
@@ -58,7 +58,10 @@ def realizar_venda(request):
     form = VendaForm(request.POST or None)
     if form.is_valid():
         form.save()
-    return redirect('listar_itens')
+        return redirect('listar_itens')
+    else:
+
+        return redirect('efetuar_venda')
 
 def listar_itens(request):
     ItensV = Itens.objects.all()
@@ -74,8 +77,6 @@ def inserir_produto(request):
     form = ItensForm(request.POST or None)
     if form.is_valid():
         form.save()
-    return redirect('listar_itens')
-
-def teste_url(self, num):
-
-    return HttpResponse('Hello %d'%num)
+        return redirect('listar_itens')
+    else:
+        return redirect('tela_inicial')

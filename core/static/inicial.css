@@ -1,3 +1,16 @@
+h4{
+    color: #483D8B;
+    font-size: 30px;
+}
+
+#listagem{
+    /*Novamente definimos a largura da div*/
+    width:1000px;
+    /* altura da div */
+    height:100px;
+    /* Cor de fundo da div */
+}
+
 body{
     margin:0px;
 }
@@ -20,4 +33,63 @@ body{
     color: #333;
     text-decoration: none;
     border-bottom:3px solid #EDEDED;
+}
+label.hora {
+
+    display: inline-block;
+    width: 130px;
+}
+label.alinha_cliente {
+    color:#483D8B;
+    font-size: 20px;
+    display: inline-block;
+    width: 180px;
+}
+textarea{
+    width:308px;
+    height:100px;;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+th {
+    background-color:#CCC;
+    font-size: 12px;
+    color:#484848;
+    padding-left:4px;
+    padding-right:4px;
+    border-bottom:solid 1px #CCC;
+    height:26px;
+    padding-right:5px;
+}
+tr:nth-child(odd) {
+	background-color:#F3F3F3;
+}
+
+tr:nth-child(even) {
+	background-color:#FFF;
+}
+
+tr, td {
+    height:26px;
+    padding-left:4px;
+    padding-right:2px;
+    font-family:Verdana, Geneva, sans-serif;
+    font-size:12px;
+    white-space:nowrap;
+    border-bottom:solid 1px #E1E1E1;
+}
+tr:hover {
+    background-color:#00D8CC;
+    cursor:pointer; color:#FFF;
+}
+
+.footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
 }

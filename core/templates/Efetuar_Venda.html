@@ -3,24 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <title>Floricultura-Vendas</title>
+        {%load static%}
+        <link rel="stylesheet" href="static/inicial.css">
     </head>
     <body>
+        <a href="{% url 'tela_inicial'%}">Tela Inicial</a>
+        <h4 align="center">Realizar Venda</h4>
+
         <form action="{%url 'realizar_venda'%}" method="POST">
             {% csrf_token%}
-             <p><label>Código do Cliente:</label><input placeholder="Código do Cliente" maxlength="40" type="text" name="cod_cliente"></p>
-             <p><label>Data da Venda:</label><input type="date" name="data_venda"></p>
-             <p><label>Valor da Venda:</label><input type="text" name="valor_venda"></p>
+            <p><label for="01" class="alinha_cliente">Código do Cliente:</label><input id="01" size="30" placeholder="Código do Cliente" maxlength="40" type="text" name="cod_cliente"></p>
+            <p><label  for="03" class="alinha_cliente">Valor da Venda:</label><input id="03" size="30" type="text" name="valor_venda"></p>
+            <p><label  for="02" class="alinha_cliente">Data da Venda:</label><input id="02"  type="date" name="data_venda"></p>
 
             <button type="submit">Iniciar Venda</button>
-        </form>
-
-        <form action="{%url 'realizar_venda'%}" method="POST">
-            {% csrf_token%}
-
-            {{ form.as_p }}
-
-            <button type="submit">Cadastrar</button>
-
         </form>
     </body>
 </html>

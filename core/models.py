@@ -31,9 +31,10 @@ class Produto(models.Model):
 
 
 class Itens(models.Model):
+    cod_itens = models.AutoField(primary_key= True)
     cod_produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
     cod_venda = models.ForeignKey(Venda, on_delete=models.CASCADE)
     qnt_produto = models.IntegerField()
 
-    def __int__(self):
-        return self.cod_venda
+    def __str__(self):
+        return self.cod_itens

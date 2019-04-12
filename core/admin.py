@@ -18,9 +18,13 @@ class ProdutoAdmin(admin.ModelAdmin):
         'cod_produto', 'nome_produto', 'valor_produto', 'qnt_estoque'
     )
 
+class ItensAdmin(admin.ModelAdmin):
+    list_display = (
+        'cod_itens', 'qnt_produto',
+    )
 
 
-admin.site.register(Cliente,ClienteAdmin)
+admin.site.register(Cliente, ClienteAdmin)
 admin.site.register(Venda, VendaAdmin)
 admin.site.register(Produto, ProdutoAdmin)
-admin.site.register(Itens)
+admin.site.register(Itens, ItensAdmin)
